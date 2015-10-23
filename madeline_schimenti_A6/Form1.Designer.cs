@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.labelInstruction = new System.Windows.Forms.Label();
-            this.texBoxInputSentence = new System.Windows.Forms.TextBox();
+            this.textBoxInputSentence = new System.Windows.Forms.TextBox();
             this.buttonAllWord = new System.Windows.Forms.Button();
-            this.listBoxAllWords = new System.Windows.Forms.ListBox();
             this.listBoxDuplicateWords = new System.Windows.Forms.ListBox();
             this.buttonDuplicateWords = new System.Windows.Forms.Button();
+            this.textBoxAllWords = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelInstruction
@@ -45,12 +45,12 @@
             this.labelInstruction.TabIndex = 0;
             this.labelInstruction.Text = "Type a sentence here:\r\n";
             // 
-            // texBoxInputSentence
+            // textBoxInputSentence
             // 
-            this.texBoxInputSentence.Location = new System.Drawing.Point(35, 51);
-            this.texBoxInputSentence.Name = "texBoxInputSentence";
-            this.texBoxInputSentence.Size = new System.Drawing.Size(527, 20);
-            this.texBoxInputSentence.TabIndex = 1;
+            this.textBoxInputSentence.Location = new System.Drawing.Point(35, 51);
+            this.textBoxInputSentence.Name = "textBoxInputSentence";
+            this.textBoxInputSentence.Size = new System.Drawing.Size(527, 20);
+            this.textBoxInputSentence.TabIndex = 1;
             // 
             // buttonAllWord
             // 
@@ -60,14 +60,7 @@
             this.buttonAllWord.TabIndex = 2;
             this.buttonAllWord.Text = "All Words";
             this.buttonAllWord.UseVisualStyleBackColor = true;
-            // 
-            // listBoxAllWords
-            // 
-            this.listBoxAllWords.FormattingEnabled = true;
-            this.listBoxAllWords.Location = new System.Drawing.Point(117, 121);
-            this.listBoxAllWords.Name = "listBoxAllWords";
-            this.listBoxAllWords.Size = new System.Drawing.Size(162, 160);
-            this.listBoxAllWords.TabIndex = 3;
+            this.buttonAllWord.Click += new System.EventHandler(this.buttonAllWord_Click);
             // 
             // listBoxDuplicateWords
             // 
@@ -88,16 +81,25 @@
             this.buttonDuplicateWords.UseVisualStyleBackColor = true;
             this.buttonDuplicateWords.Click += new System.EventHandler(this.button1_Click);
             // 
+            // textBoxAllWords
+            // 
+            this.textBoxAllWords.Location = new System.Drawing.Point(116, 121);
+            this.textBoxAllWords.Multiline = true;
+            this.textBoxAllWords.Name = "textBoxAllWords";
+            this.textBoxAllWords.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxAllWords.Size = new System.Drawing.Size(168, 133);
+            this.textBoxAllWords.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 318);
+            this.Controls.Add(this.textBoxAllWords);
             this.Controls.Add(this.listBoxDuplicateWords);
             this.Controls.Add(this.buttonDuplicateWords);
-            this.Controls.Add(this.listBoxAllWords);
             this.Controls.Add(this.buttonAllWord);
-            this.Controls.Add(this.texBoxInputSentence);
+            this.Controls.Add(this.textBoxInputSentence);
             this.Controls.Add(this.labelInstruction);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -109,11 +111,11 @@
         #endregion
 
         private System.Windows.Forms.Label labelInstruction;
-        private System.Windows.Forms.TextBox texBoxInputSentence;
+        private System.Windows.Forms.TextBox textBoxInputSentence;
         private System.Windows.Forms.Button buttonAllWord;
-        private System.Windows.Forms.ListBox listBoxAllWords;
         private System.Windows.Forms.ListBox listBoxDuplicateWords;
         private System.Windows.Forms.Button buttonDuplicateWords;
+        private System.Windows.Forms.TextBox textBoxAllWords;
     }
 }
 

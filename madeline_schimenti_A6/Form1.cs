@@ -12,6 +12,8 @@ namespace madeline_schimenti_A6
 {
     public partial class Form1 : Form
     {
+        List<string> words; 
+
         public Form1()
         {
             InitializeComponent();
@@ -24,6 +26,24 @@ namespace madeline_schimenti_A6
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+           
+        }
+
+        private void buttonAllWord_Click(object sender, EventArgs e)
+        {
+            words = new List<string>();
+
+            string userInput = textBoxInputSentence.Text;
+
+            words.Add(userInput);
+
+            string[] wordsInSentence = userInput.Split();
+
+            textBoxAllWords.Clear();
+            foreach (string element in wordsInSentence)
+               textBoxAllWords.AppendText(element.ToString() + "\n");
+
+            
 
         }
     }
