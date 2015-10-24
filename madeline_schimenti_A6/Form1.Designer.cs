@@ -31,9 +31,9 @@
             this.labelInstruction = new System.Windows.Forms.Label();
             this.textBoxInputSentence = new System.Windows.Forms.TextBox();
             this.buttonAllWord = new System.Windows.Forms.Button();
-            this.listBoxDuplicateWords = new System.Windows.Forms.ListBox();
             this.buttonDuplicateWords = new System.Windows.Forms.Button();
             this.textBoxAllWords = new System.Windows.Forms.TextBox();
+            this.textBoxDistinctWords = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelInstruction
@@ -62,22 +62,13 @@
             this.buttonAllWord.UseVisualStyleBackColor = true;
             this.buttonAllWord.Click += new System.EventHandler(this.buttonAllWord_Click);
             // 
-            // listBoxDuplicateWords
-            // 
-            this.listBoxDuplicateWords.FormattingEnabled = true;
-            this.listBoxDuplicateWords.Location = new System.Drawing.Point(432, 121);
-            this.listBoxDuplicateWords.Name = "listBoxDuplicateWords";
-            this.listBoxDuplicateWords.Size = new System.Drawing.Size(148, 160);
-            this.listBoxDuplicateWords.TabIndex = 5;
-            this.listBoxDuplicateWords.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
             // buttonDuplicateWords
             // 
             this.buttonDuplicateWords.Location = new System.Drawing.Point(329, 121);
             this.buttonDuplicateWords.Name = "buttonDuplicateWords";
             this.buttonDuplicateWords.Size = new System.Drawing.Size(96, 29);
             this.buttonDuplicateWords.TabIndex = 4;
-            this.buttonDuplicateWords.Text = "Duplicate Words";
+            this.buttonDuplicateWords.Text = "Distinct Words";
             this.buttonDuplicateWords.UseVisualStyleBackColor = true;
             this.buttonDuplicateWords.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -90,13 +81,23 @@
             this.textBoxAllWords.Size = new System.Drawing.Size(168, 133);
             this.textBoxAllWords.TabIndex = 6;
             // 
+            // textBoxDistinctWords
+            // 
+            this.textBoxDistinctWords.Location = new System.Drawing.Point(437, 121);
+            this.textBoxDistinctWords.Multiline = true;
+            this.textBoxDistinctWords.Name = "textBoxDistinctWords";
+            this.textBoxDistinctWords.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxDistinctWords.Size = new System.Drawing.Size(168, 133);
+            this.textBoxDistinctWords.TabIndex = 7;
+            this.textBoxDistinctWords.TextChanged += new System.EventHandler(this.textBoxDistinctWords_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 318);
+            this.Controls.Add(this.textBoxDistinctWords);
             this.Controls.Add(this.textBoxAllWords);
-            this.Controls.Add(this.listBoxDuplicateWords);
             this.Controls.Add(this.buttonDuplicateWords);
             this.Controls.Add(this.buttonAllWord);
             this.Controls.Add(this.textBoxInputSentence);
@@ -113,9 +114,9 @@
         private System.Windows.Forms.Label labelInstruction;
         private System.Windows.Forms.TextBox textBoxInputSentence;
         private System.Windows.Forms.Button buttonAllWord;
-        private System.Windows.Forms.ListBox listBoxDuplicateWords;
         private System.Windows.Forms.Button buttonDuplicateWords;
         private System.Windows.Forms.TextBox textBoxAllWords;
+        private System.Windows.Forms.TextBox textBoxDistinctWords;
     }
 }
 
